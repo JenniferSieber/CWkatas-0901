@@ -45,14 +45,12 @@ const infiniteLoop = (arr, str, n) => {
   while (n--) {
     for (let i = 0; i < len; i++) {
       if (str === 'left') {
-        arr[i]
-          .push( arr[(i + 1) % len]
+        arr[i].push( arr[(i + 1) % len]
           .shift() );
       }
 
       if (str === 'right') {
-        arr[(i + 1) % len]
-          .unshift( arr[i]
+        arr[(i + 1) % len].unshift( arr[i]
           .pop() );
       }
     }
@@ -76,7 +74,3 @@ const threeInOne = arr => {
 
 console.log(threeInOne( [1,2,3]) );
 console.log(threeInOne( [1,3,5,2,4,6,7,7,7]));
-
-
-//THE LIST OF TRAINING
-// https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
